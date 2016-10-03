@@ -1,0 +1,36 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// How to customize:
+// To remove an elemement, comment it out by wrapping the elemements in
+// comments like this /* Element */
+// // or /**/ denote elements that are not read by the client
+// on most code editors (I use atom, atom.io) these elements will be grey
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Set the number of slays required to be banned by changing this value:
+var slayReq = 1; // Default value 1, do not set to zero
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Fetch Libraries
+var events = require('events'),
+    utils = require('utils');
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Setup Storage Arrays
+var haveSlay = []; // Array (Current Session) of players with 1 slay
+// Note: Banned after one slay (two instances) instead of a kick then ban
+// This is due to the behavior of arrays in ScriptCraft and session
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Command line access
+function execCommand(command){server.executeVanillaCommand(server,command);}
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Main anticheat:
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Creative Mode Prevent:
+function noCmode{
+  var message = event.getMessage(); // Fetch contents of chat message
+  if message = '/gamemode c'||'/gamemode 1'||'/gamemode creative'{
+    if slayReq != 0{
+
+    } //end slayReq if statement
+    else {
+
+    } // End if statement for default setting (else)
+  } // end message fetch if statement
+} // end main function
